@@ -1,0 +1,18 @@
+A quanity Surveyor is the financial manager and the controller of a construction Project
+
+If a massive wedding requires 500 guests;
+    The Architect draws what the venue, the stage, tables and chairs should looks like
+    The Engineer makes sure the tent does not collapse on heavy wind
+    The Quantity Surveyor calculates exactly how many yards of fabric, plates, and chairs are needed
+     negotiates prices with the caterers, and pays the vendors for the amount of work actually completed
+
+
+On a construction site, a QS manages the money from initial budget estimation before breaking ground, all the way to final audit after completion
+
+            His work on the Job
+    ======================================
+    1. Estimating and Cost Planning- Calc the total cost of a project before it starts based on architectural drawings
+    2. Preparing the Bill of Quantities (BOQ)- Creaating an itemized list of every material, piece of equipment, and labor task needed
+    3. Tendering & Procurement - Sending BOQs to contractors to get competitive bids and selecting the right suppliers
+    4. Valuation &Site Measurement - Visits the site, and measure the work completed (e.g., "50% of the foundation is done"), and issues Payment certificates.
+    5. Cost Control &Variation Management - Tracking design changes or unexpected expenses so the project doesn't excceed it's budget
