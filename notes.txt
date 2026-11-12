@@ -27,5 +27,5 @@ Field Paper Notes / Messy Excel  -->  Local IndexedDB Capture  -->  Auto-Sync to
 2. The Solution
 "We built an offline-first Progressive Web App (PWA) designed specifically for site visits. A QS can walk onto a remote build site, measure structural dimensions, log material deliveries, calculate concrete volumes, and record progress offline in IndexedDB without needing a single bar of cellular network."
 
-3. 3. The Technical Hook & Business Value
+3. The Technical Hook & Business Value
 "The moment their device detects an internet connection, Service Workers trigger a background sync with Supabase, reconciling site entries with the main cloud database. It automatically generates timestamped measurement logs and instant PDF payment certificates, turning hours of manual office data entry into a single tap."
