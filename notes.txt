@@ -29,3 +29,8 @@ Field Paper Notes / Messy Excel  -->  Local IndexedDB Capture  -->  Auto-Sync to
 
 3. The Technical Hook & Business Value
 "The moment their device detects an internet connection, Service Workers trigger a background sync with Supabase, reconciling site entries with the main cloud database. It automatically generates timestamped measurement logs and instant PDF payment certificates, turning hours of manual office data entry into a single tap."
+
+==================================
+    QS Pocket: AI Feature Plan
+==================================
+
