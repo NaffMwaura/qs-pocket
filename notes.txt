@@ -33,4 +33,9 @@ Field Paper Notes / Messy Excel  -->  Local IndexedDB Capture  -->  Auto-Sync to
 ==================================
     QS Pocket: AI Feature Plan
 ==================================
-
+AI Features 
+==================================
+    1.Blueprint Takeoff Canvas- Upload a drawing. AI model:
+        💨(Autodetect and count)finds all doors, windows, columns or toilets and drops markers the QS can accept or delete
+        💨(Room and area detection)tap inside a room and the app traces the walls and returns the floor area
+        💨(Auto-scale reading)
