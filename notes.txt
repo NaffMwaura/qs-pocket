@@ -38,4 +38,30 @@ AI Features
     1.Blueprint Takeoff Canvas- Upload a drawing. AI model:
         💨(Autodetect and count)finds all doors, windows, columns or toilets and drops markers the QS can accept or delete
         💨(Room and area detection)tap inside a room and the app traces the walls and returns the floor area
-        💨(Auto-scale reading)
+        💨(Auto-scale reading)- Model reads the printed scale ("1:100") and the dimension labels on the drawing to propose the calibration
+        💨 (Drawing and Q&A)- Claude reads the drawing and answers, pointing tom the highlighted walls
+
+    2. Photo Progress Analyzer
+        💨Identifies the excavation, foundation, columns, slab, walls, roofing, plastering, finishes
+        💨Suggests a progress percentage for matching BOQ element, with a confidence level
+        💨Flags visible quality issues for human review 
+        💨 Writes a short caption and tags the photo to a BOQ item and location automatically
+
+    3. BOQ Reader
+        💨Upload an existing BOQ(Pdf, scanned page or excel) and AI converts it into structured items (description, unit, quantity, rate), grouped by element. This removed the most boring part of starting a project and brings ease in understanding
+
+    4. Voice Measurement Dictation
+        💨Turns voice into a dimension sheet row attached to the right BOQ item.Support English and Swahili, and mixed Sheng if you can
+
+    5. Material Anomaly Detector
+        💨 Compare Material usage against what the BOQ and measured work say should have been used
+    
+    6. Ask your Project (natural language)
+        💨 A chat box over the project data:
+            "How much have we certified for the foundations so far"
+            "Which items are over budget"
+            "Summarize this months variations"
+        💨 Model should call real functions against my database (A tools approach) so numbers come from my data, never from the model's imagination
+
+    7. Draft Documents
+        💨 Auto-draft the valuation summary, variation notice or site report text from the data . The QS edits and sends
