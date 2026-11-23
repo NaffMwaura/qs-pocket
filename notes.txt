@@ -65,3 +65,5 @@ AI Features
 
     7. Draft Documents
         💨 Auto-draft the valuation summary, variation notice or site report text from the data . The QS edits and sends
+
+
