@@ -1,0 +1,47 @@
+Part 1: Initialize Supabase CLI Inside backend/
+
+    ==>pnpm dlx supabase init
+
+    What this creates for you:
+
+            ||>backend/supabase/config.toml — local Supabase CLI configuration.
+
+            ||>backend/supabase/migrations/ — folder where your SQL migration files will live.
+
+            ||>backend/supabase/seed.sql — optional local seed script for test data.
+
+Part 2: Create the Project on Supabase
+    Once supabase init finishes, set up your project in the Supabase Dashboard:
+
+        Sign in & click "New Project" at supabase.com (signing in with GitHub is convenient if your repo is on GitHub).
+
+        Name your project clearly—for example, qs-pocket-dev (keeping a separate project later for production).
+
+        Generate & save a strong database password somewhere safe (like a password manager); you'll need it when linking via the CLI.
+
+        Pick a region carefully: Choose the closest available region to Kenya/users to keep latency reasonable. Note that a project's region cannot be changed after creation, so double-check it before clicking create.
+
+        Wait for provisioning, then go to Project Settings → API (or Data API / API Keys in the dashboard) and note down:
+
+        Project URL (https://<project-ref>.supabase.co)
+
+        Publishable / anon key (safe for the frontend once RLS is enabled)
+
+        (Keep the service_role / secret key strictly off the frontend and out of git.)
+
+
+Part 3: Link Your Local backend/ to the Cloud Project
+    After your project is created in the dashboard, link it from QS-Pocket/backend:
+
+            pnpm dlx supabase login
+            pnpm dlx supabase link --project-ref <your-project-ref>
+            You can find <your-project-ref> in your Supabase project's General settings or right in the dashboard URL ([https://supabase.com/dashboard/project/](https://supabase.com/dashboard/project/)<your-project-ref>
+    
+    Create init_core_schema.sql
+            pnpm dlx supabase migration new init_core_schema
+
+        Copy code to create the tables then push
+
+    The command to push
+        pnpm dlx supabase db push --remote
+
