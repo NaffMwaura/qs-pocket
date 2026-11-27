@@ -1,0 +1,65 @@
+1. frontend/src/
+    app/                  router, providers, app shell, layout
+    platform/             infrastructure, no business rules
+        db/                 Dexie instance, schema versions, migrations
+        sync/               the sync engine (own module, see section 5)
+        auth/               login, session
+        pwa/                service worker, install prompt, persistent storage
+        network/            online/offline detection
+    modules/              business features
+        projects/
+        boq/                BOQ items, rates, import
+        measurement/        measurement book + dimension sheets
+        takeoff/            blueprint canvas
+        valuation/          work done, retention, VAT, IPC
+        variations/
+        materials/
+        photos/
+        ai/                 suggestion queue + review UI
+    shared/
+        ui/                 buttons, inputs, dialogs
+        lib/                money, units, dates, id generation
+        types/
+
+
+2. modules/measurement/
+    domain/        pure logic + *.test.ts   (timesing, deductions, totals)
+    data/          repository: the only code that touches Dexie for this module
+    hooks/         useMeasurements(), etc.
+    ui/            components and pages
+    index.ts       public API
+
+3. platform/sync/
+    outbox.ts        queue of local changes
+    pushQueue.ts     sends changes to Supabase in order, with retry/backoff
+    pull.ts          fetches remote changes since a per-table cursor
+    conflict.ts      resolution policy
+    triggers.ts      when to sync
+    status.ts        state for the UI indicator
+
+4. modules/takeoff/
+    domain/
+        scale.ts         calibrate(pointA, pointB, realDistance) -> pixelsPerMetre
+        geometry.ts      polylineLength, polygonArea, deductions
+        shapes.ts        shape types: length, area, count
+    canvas/            Konva layers, tools, pan/zoom
+    pdf/               PDF page to tiled raster, with a zoom cap for low-memory phones
+    ui/
+    index.ts           exposes "createMeasurementFromShape()" to the measurement module
+
+5. frontend/src/
+    └── platform/
+        └── db/
+            ├── index.ts          # Exports the `db` Dexie instance and helper types
+            ├── schema.ts         # Table names, TypeScript record interfaces, and outbox types
+            └── migrations.ts     # Versioned Dexie `.version(1).stores({...})` definitions
+            
+6. QS-Pocket/
+    docs/                  ARCHITECTURE.md, decisions/ (ADRs), notes (move notes.txt here)
+    frontend/              the PWA
+    backend/               Supabase project, not a custom server
+        supabase/
+        migrations/        SQL schema + row-level security
+        functions/         edge functions (ai-analyze, ...)
+
+    
